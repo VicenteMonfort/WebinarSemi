@@ -11,7 +11,7 @@
         <?php include 'main.php'; ?>
     </div>
 
-    <form method="post" action="pagina2.php">
+    <form method="post" action="correo.php">
 
 	<label for="subject">Asunto</label>
 	<input type="text" name="subject" id="subject"><br>
