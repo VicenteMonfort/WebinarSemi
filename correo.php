@@ -1,22 +1,19 @@
 <?php 
-// Por si existen errores
-error_reporting(-1);
-ini_set('display_errors', 'On');
-set_error_handler("var_dump");
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $destinatario = $_POST["destinatario"];
+    $asunto = $_POST["asunto"];
+    $mensaje = $_POST["mensaje"];
 
-$subject = $_POST['subject'];
-$msg = $_POST['msg'];
-$from = $_POST['from'];
+    // Configurar el correo
+    $headers = "From: vmonfort@florida-uni.es" . "\r\n" .
+               "Reply-To: vmonfort@florida-uni.es" . "\r\n" .
+               "X-Mailer: PHP/" . phpversion();
 
-$headers = "From: vmonfort@florida-uni.es\r\n"; 
-$headers .= "Reply-To: $from\r\n";
-$headers .= "MIME-Version: 1.0\r\n";
-$headers .= "Content-Type: text/html; charset=utf-8\r\n"; 
-	
-if(mail($from, $subject, $msg,$headers)){
-	echo "mail enviado";
-	}else{
-	$errorMessage = error_get_last()['msg'];
-	echo $errorMessage;
+    // Enviar el correo
+    if (mail($destinatario, $asunto, $mensaje, $headers)) {
+        echo "El correo se envió correctamente.";
+    } else {
+        echo "Hubo un error al enviar el correo.";
+    }
 }
 ?>

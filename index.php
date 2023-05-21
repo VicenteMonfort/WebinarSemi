@@ -12,17 +12,14 @@
     </div>
 
     <form method="post" action="correo.php">
-
-	<label for="subject">Asunto</label>
-	<input type="text" name="subject" id="subject"><br>
-
-	<label for="from">Correo</label>
-	<input type="text" name="from" id="from"><br>
-
-	<label for="msg">Mensaje: </label>
-	<textarea name="msg" id="msg" cols="30" rows="10"></textarea><br>
-
-	<input type="submit">
+        <label for="destinatario">Destinatario:</label>
+        <input type="email" name="destinatario" id="destinatario" required><br><br>
+        <label for="asunto">Asunto:</label>
+        <input type="text" name="asunto" id="asunto" required><br><br>
+        <label for="mensaje">Mensaje:</label><br>
+        <textarea name="mensaje" id="mensaje" rows="5" cols="30" required></textarea><br><br>
+        <input type="submit" value="Enviar correo">
+    </form>
 
 </form>
 
