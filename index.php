@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>EJEMPLO PILA LAMP</title>
+    <title>-EJEMPLO PILA LAMP-</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
