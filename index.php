@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <h1>*EJEMPLO PILA LAMP*7/06/23</h1>
+    <h1>*EJEMPLO PILA LAMP ÑÑ áÉ*</h1>
     <div class="container">
         <h2>Resultado a la consulta</h2>
         <?php include 'main.php'; ?>
